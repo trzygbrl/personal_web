@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+    <title>Timeline</title>
+    <style>
+        .timeline{
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+        .column{
+            display:flex;
+            height:200px;
+            width: 30%;
+            border-radius: 5%;
+            padding: 2%;
+            align-content: center;
+            position:relative;
+        }
+        .space{
+            width:3%;
+        }
+        .imgDiv{
+            margin: 3%;
+            position:relative;
+            width: 35%;
+        }
+        .descDiv{
+            position:relative;
+            width: 55%;
+            text-align: justify;
+            margin-bottom:1%;
+            padding:2%;
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: large;
+            text-indent: 20%;
+        }
+        .leftA{
+            animation-name:toRightA;
+            animation-duration: 1.5s;
+        }
+        .leftB{
+            animation-name:toRightB;
+            animation-duration: 1.5s;
+        }
+        .rightA{
+            animation-name:toLeftA;
+            animation-duration: 1.5s;
+        }
+        .rightB{
+            animation-name:toLeftB;
+            animation-duration: 1.5s;
+        }
+        .top{
+            animation-name: toBot;
+            animation-duration: 1.5s;
+        }
+        .bot{
+            animation-name: toTop;
+            animation-duration: 1.5s;
+        }
+
+        h2{
+            font-family: "Chicle", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size:40px;
+            color:#ff3698;
+        }
+
+        @keyframes toRightA{
+            0%{left:-500px; background-color: white;}
+            100%{left:0px;background-color: #ff3698;}
+        }
+        @keyframes toRightB{
+            0%{left:-500px; background-color: #ff3698;}
+            100%{left:0px;background-color: white;}
+        }
+        @keyframes toLeftA{
+            0%{right:-500px; background-color: white;}
+            100%{right:0px;background-color: #ff3698;}
+        }
+        @keyframes toLeftB{
+            0%{right:-500px; background-color: #ff3698;}
+            100%{right:0px;background-color: white;}
+        }
+        @keyframes toTop{
+            0%{bottom:-500px; background-color: white;}
+            100%{bottom:0px;background-color: #ff3698;}
+        }
+        @keyframes toBot{
+            0%{top:-500px; background-color: #ff3698;}
+            100%{top:0px;background-color: white;}
+        }
+
+
+        @media only screen and (max-width:1000px){
+            /* tablets */
+            .timeline{
+                width: 100%;
+            }
+            .column{
+                width:100%;
+                height:400px;
+            }
+        }
+        @media only screen and (max-width:600px){
+            /* mobile phones */
+            .timeline{
+                display:block;
+                width: 100%;
+            }
+            .column{
+                width:100%;
+                height:200px;
+            }
+            
+        }
+        
+    </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chicle&family=Fleur+De+Leah&family=Gamja+Flower&family=Henny+Penny&family=Playwrite+DE+Grund:wght@100..400&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+</head>
+<body bgcolor="#f9cce">
+    <h2 align="center">Trizy's Timeline</h1>
+    <div class="timeline">
+        <div class="column leftA" style="background-color: #ff3698;">
+            <div class="imgDiv">
+            <img src="baby.jpg" style="width: 100%; height: 160px; border: 5px, solid, white; border-radius: 5%;">
+            </div>
+            <div class="descDiv">
+                <p style="color:white;"> A very cute and pretty baby girl was born on March 16, 2007, at the City of San Fernando, Pampanga.
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column top" style="background-color: white;">
+            <div class="descDiv">
+                <p style="color:black;"> Want to know a fact about me? I started school when I was three years old, and I skipped one kinder year, does that make me a genius? Haha!
+            </div>
+            <div class="imgDiv">
+                <img src="nursery.jpg" style="width: 100%; height: 160px; border: 5px, solid, #ff3698; border-radius: 5%;">
+                </div>
+        </div>
+        <div class="space"></div>
+        <div class="column rightA" style="background-color: #ff3698;">
+            <div class="imgDiv">
+                <img src="elem.jpg" style="width: 100%; height: 160px; border: 5px, solid, white; border-radius: 5%;">
+                </div>
+                <div class="descDiv">
+                    <p style="color:white;"> I graduated elementary school, year 2018, from San Fernando Elementary School's Special Science Class. I miss only having to solve worded math problems.
+                </div>
+        </div>
+    </div>
+    <br>
+    <div class="timeline">
+        <div class="column leftB" style="background-color: white;">
+            <div class="descDiv">
+                <p style="color:black;"> I spent my special high school years in ICTHS at Sindalan, CSFP. I would say those were the memorable years of my life. I met friends that I know would be part of my life forever.
+            </div>
+            <div class="imgDiv">
+                <img src="hs.jpg" style="width: 100%; height: 160px; border: 5px, solid, #ff3698; border-radius: 5%;">
+                </div>
+        </div>
+        <div class="space"></div>
+        <div class="column bot" style="background-color: #ff3698;">
+            <div class="imgDiv">
+                <img src="auf.jpg" style="width: 100%; height: 160px; border: 5px, solid, white; border-radius: 5%;">
+                </div>
+                <div class="descDiv">
+                    <p style="color:white;"> Now, I am studying in AUF for college, enjoying my freshie years (not really). But, so far, I can say that I am enjoying, because I am learning a lot.
+                </div>
+        </div>
+        <div class="space"></div>
+        <div class="column rightB" style="background-color: white">
+            <div class="descDiv">
+                <p style="color:black;"> Still unsure of what the future holds for me, but I wish that I could continue on doing my best and I hope that my future self won't give up.
+            </div>
+            <div class="imgDiv">
+                <img src="future.jpg" style="width: 100%; height: 160px; border: 5px, solid, #ff3698; border-radius: 5%;">
+                </div>
+        </div>
+    </div>
+</body>
+</html>

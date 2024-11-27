@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .home{
+            width: 100%;
+            display:flex;
+        }
+        .left{
+            float:left;
+            width: 35%;
+            margin: 2%;
+        }
+        .card{
+            background-color: #ff3698;
+            border: 3px solid white;
+            border-radius: 1%;
+            width: 100%;
+            height: 200px;
+            animation-name: sheesh;
+            animation-duration: 2s;
+            margin: inherit;
+            background-image: url(sparkle2.gif);
+            background-size:contain;
+            display:flex;
+            color:white;
+        }
+        .idpic{
+            width: 40%;
+            vertical-align: middle;
+            margin:auto;
+            padding:2%;
+        }
+        .idinfo{
+            width: 50%;
+            padding: 2%;
+            text-align:left;
+            margin:auto;
+        }
+        .desc{
+            background-color: #ff3698;
+            border: 3px solid white;
+            border-radius: 1%;
+            width: 100%;
+            height: 250px;
+            animation-name: sheesh;
+            background-image: url(sparkle2.gif);
+            background-size:contain;
+            animation-duration: 2.5s;
+            margin: inherit;
+            text-align:justify;
+            padding: 3%;
+            color:white;
+        }
+        .greet{
+            background-color: #ff3698;
+            border: 3px solid white;
+            border-radius: 1%;
+            width: 100%;
+            height: 50px;
+            animation-name: sheeshR;
+            animation-duration: 2.5s;
+            left: 100%;
+            margin:2%;
+            padding:0.5%;
+            text-align: center;
+            background-image: url(sparkle2.gif);
+            background-size:contain;
+            font-size: x-large;
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: xx-large;
+            color:white;
+        }
+        .right{
+            float:right;
+            width: 55%;
+            margin: 2%;
+        }
+        .container{
+            width: 100%;
+            position: relative;
+            margin:inherit;
+        }
+        .slides1{
+            display:none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .fade {
+            animation-name: slide;
+            animation-duration: 1.5s;
+        }
+        img{
+            vertical-align: middle;
+            width:100%;
+            height: 375px;
+        }
+        .caption {
+        text-align: center;
+        background-color: rgba(251,198,207,0.8);
+        padding: 2%;
+        color: white;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        height: 50px;
+        }
+        .image{
+            height:160px;
+        }
+
+        @keyframes sheesh {
+            from {width: 0%}
+            to {width: 100%}
+        }
+        @keyframes sheeshR {
+            from {transform: translateX(100%);}
+            to {transform: translateX(0%);}
+        }
+        @keyframes slide {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .idinfo, .desc, .caption{
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: large;
+        }
+
+        @media only screen and (max-width:1000px){
+            /* tablets */
+            .home{
+                display:block;
+                width: 100%;
+            }
+            .left, .right{
+            float:left;
+            width: 100%;
+            margin:0;
+            }
+            .greet{
+                margin:0;
+                margin-top: 10px;
+            }
+            .card, .desc{
+                height: 300px;
+                font-size: x-large;
+            }
+            .idinfo{
+                font-size: x-large;
+            }
+            .caption{
+                font-size: x-large;
+                padding:1%;
+            }
+            .image{
+                height:250px;
+            }
+        }
+        @media only screen and (max-width:600px){
+            /* mobile phones */
+            .home{
+                display:block;
+                width: 100%;
+            }
+            .left, .right{
+            float:left;
+            width: 100%;
+            margin:0;
+            }
+            .card{
+                height: 200px;
+                font-size: large;
+            }
+            .desc{
+                height: 250px;
+                font-size: large;
+            }
+            .idinfo{
+                font-size: large;
+            }
+            .caption{
+                font-size: large;
+                padding:2.5%;
+            }
+            .greet{
+                margin:0;
+                margin-top: 10px;
+            }
+            .image{
+                height:160px;
+            }
+        }
+
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Gamja+Flower&family=Henny+Penny&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body bgcolor="#f9cce">
+    <div class="home">
+    <div class="left">
+    <div class="card">
+        <div class="idpic"><img class="image" src="id.jpg" style="width:100%; border-radius: 100%; border: 5px solid white;"></div>
+        <div class="idinfo">
+            Name: Trizy Gabriel N. Nicdao<br>
+            Birthday: March 16, 2007<br>
+            Age: 17<br>
+            Sex: Female<br>
+        </div>
+    </div>
+    <div class="desc">
+        <p style="text-align: center;">Hello! I am Trizy!</p>
+        <p style="text-indent: 8%;">I am currently a student at Angeles University Foundation and my program is BS in Computer Science.
+        <p style="text-indent: 8%;">In this website you will learn everything about me, from my basic information to my favorite food and color. (I hope that you know what my favorite color is by now)
+    </div>
+    </div>
+
+    <div class="right">
+    <div class="greet">My Gallery</div>
+    <div class="container">
+        <div class="slides1 fade"><img src="me.jpg">
+        <div class="caption">A picture of me</div>
+        </div>
+        <div class="slides1 fade"><img src="debut.jpg">
+        <div class="caption">A picture of me</div>
+        </div>
+        <div class="slides1 fade"><img src="peggy.jpg">
+            <div class="caption">A picture of me</div>
+            </div>
+        <div class="slides1 fade"><img src="me1.jpg">
+        <div class="caption">A picture of me</div>
+        </div>
+        <div class="slides1 fade"><img src="family.jpg">
+        <div class="caption">A picture of me and my family</div>
+        </div>
+        <div class="slides1 fade"><img src="friends.jpg">
+        <div class="caption">A picture of me and my friends and their family</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    </div>
+    </div>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides1");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>

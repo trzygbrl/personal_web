@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+    <title>Favorites</title>
+    <style>
+        .fave{
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+        .column{
+            display:block;
+            height:50px;
+            width: 20%;
+            border-radius: 5%;
+            padding:2%;
+            align-items: center;
+            position: relative;
+        }
+        .space{
+            width:1%;
+        }
+        .title{
+            height: 25px;
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: large;
+            text-align: center;
+        }
+        .image{
+            background-color: white;
+            display: none;
+            width: 100%;
+            height:150px;
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+        .btn{
+            background-color: #ff3698;
+            color: white;
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            padding: 2%;
+            border: none;
+            border-radius: 5%;
+            cursor:pointer;
+        }
+        h2{
+            font-family: "Chicle", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size:40px;
+            color:#ff3698;
+        }
+        
+        @media only screen and (max-width:1000px){
+            /* tablets */
+            .fave{
+                display:block;
+                width: 100%;
+                margin:auto;
+                align-content: center;
+            }
+            .column{
+                width:80%;
+                height:50px;
+                margin:auto;
+                margin-bottom:3%;
+                border-radius: 5%;
+            }
+            .space{
+                width:0;
+                margin:0;
+            }
+            .btn{
+                height:20px;
+                padding:0;
+                border-radius:5%;
+            }
+            .image{
+                width:60%;
+                margin:auto;
+            }
+        }
+        @media only screen and (max-width:600px){
+            /* mobile phones */
+            .fave{
+                display:block;
+                width: 100%;
+                margin:auto;
+                align-content: center;
+            }
+            .column{
+                width:80%;
+                height:50px;
+                margin:auto;
+                margin-bottom:3%;
+                border-radius: 8%;
+            }
+            .space{
+                width:0;
+                margin:0;
+            }
+            .btn{
+                height:20px;
+                padding:0;
+                border-radius:8%;
+            }
+            .image{
+                width:80%;
+                margin:auto;
+            }
+            
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Fleur+De+Leah&family=Gamja+Flower&family=Henny+Penny&family=Playwrite+DE+Grund:wght@100..400&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+</head>
+<body bgcolor="#f9cce">
+    <h2 align="center">Trizy's Favorites</h1>
+    <div class="fave">
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Food
+            </div>
+            <div class="image" id="image-0">
+                Dinakdakan
+                <img src="food.jpg" style="width:100%; height:125px;">
+            </div>
+            <div class="btn" data-index="0" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Color
+            </div>
+            <div class="image" id="image-1">
+                <img src="pink.gif" style="width:100%; height:140px;">
+            </div>
+            <div class="btn" data-index="1" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Item
+            </div>
+            <div class="image" id="image-2">
+                <img src="beel.jpg" style="width:100%; height:140px;">
+            </div>
+            <div class="btn" data-index="2" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Thing To Do
+            </div>
+            <div class="image" id="image-3">
+                I love singing. Listen to my cover.
+                <video style="width:100%; height:120px;" controls>
+                    <source src="cover.mp4" type="video/mp4">
+                    </video>
+            </div>
+            <div class="btn" data-index="3" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggle(button){
+            let index = button.getAttribute("data-index");
+            let picture = document.getElementById("image-" + index);
+            let col = button.closest(".column");
+
+            if (picture.style.display === "none" || picture.style.display === ""){
+                picture.style.display = "block";
+                button.innerHTML = "Hide";
+                button.style.backgroundColor = "dodgerblue";
+                col.style.height = "200px";
+            }
+            else{
+                picture.style.display = "none";
+                button.innerHTML = "Reveal";
+                button.style.backgroundColor = "#ff3698";
+                col.style.height = "50px";
+            }
+        }
+        
+    </script>
+
+    <br>
+    <div class="fave">
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Song
+            </div>
+            <div class="image" id="image-4">
+                <br>
+                Paranoia
+                <audio style="width:100%;" controls>
+                    <source src="song.mp3">
+                    </audio>
+                By HEARTSTEEL
+            </div>
+            <div class="btn" data-index="4" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Manhwa
+            </div>
+            <div class="image" id="image-5">
+                Romance 101
+                <img src="romance.png" style="width:100%; height:125px;">
+            </div>
+            <div class="btn" data-index="5" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+        <div class="title">
+            My Favorite Artist
+        </div>
+        <div class="image" id="image-6">
+            Mosawo
+            <img src="artist.jpg" style="width:100%; height:125px;">
+        </div>
+        <div class="btn" data-index="6" onclick="toggle(this)">
+            Reveal
+        </div></div>
+        <div class="space"></div>
+        <div class="column" style="background-color: white;">
+            <div class="title">
+                My Favorite Anime
+            </div>
+            <div class="image" id="image-7">
+                Beelzebub
+                <img src="anime.jpg" style="width:100%; height:125px;">
+            </div>
+            <div class="btn" data-index="7" onclick="toggle(this)">
+                Reveal
+            </div>
+        </div>
+    </div>
+</body>
+</html>
